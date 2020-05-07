@@ -7,51 +7,51 @@
   "mostPicked": [
     {
       "_id": "asd1293uasdads1",
-      "name": "Jung Hook Sie",
-      "type": "Apartment",
-      "imageUrl": "/images/mostpicked-1.jpg",
-      "country": "South Korea",
-      "city": "Seoul Flore",
+      "name": "Paket Kantoran",
+      "type": "Paket Hemat",
+      "imageUrl": "/images/food/paketkantoran2.jpg",
+      "country": "",
+      "city": "Min 10 Porsi",
       "price": "80",
       "unit": "night"
     },
     {
       "_id": "asd1293uasdads1",
-      "name": "The People House",
-      "type": "Hotel",
-      "imageUrl": "/images/mostpicked-2.jpg",
-      "country": "Indonesia",
-      "city": "Bogor",
+      "name": "Paket Buka Puasa",
+      "type": "Paket Hemat",
+      "imageUrl": "/images/food/paketbukapuasa.jpg",
+      "country": "",
+      "city": "Min 10 Porsi",
       "price": "52",
-      "unit": "night"
+      "unit": "Porsi"
     },
     {
       "_id": "asd1293uasdads1",
-      "name": "House Tour",
+      "name": "Paket Prasmanam",
       "type": "Rumah",
-      "imageUrl": "/images/mostpicked-3.jpg",
-      "country": "South Korea",
-      "city": "Seoul Flore",
+      "imageUrl": "/images/food/prasmanan.jpg",
+      "country": "",
+      "city": "Min 10 Porsi",
+      "price": "20000",
+      "unit": "Porsi"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "name": "Paket Pesta Pernikahan",
+      "type": "Apartment",
+      "imageUrl": "/images/food/wedding.jpg",
+      "country": "",
+      "city": "Min 10 Porsi",
       "price": "80",
       "unit": "night"
     },
     {
       "_id": "asd1293uasdads1",
-      "name": "Jung Hook Sie",
+      "name": "Paket Super Hemat",
       "type": "Apartment",
-      "imageUrl": "/images/mostpicked-4.jpg",
-      "country": "South Korea",
-      "city": "Seoul Flore",
-      "price": "80",
-      "unit": "night"
-    },
-    {
-      "_id": "asd1293uasdads1",
-      "name": "Jung Hook Sie",
-      "type": "Apartment",
-      "imageUrl": "/images/mostpicked-5.jpg",
-      "country": "South Korea",
-      "city": "Seoul Flore",
+      "imageUrl": "/images/food/pakethemat.jpg",
+      "country": "",
+      "city": "Min 10 Porsi",
       "price": "80",
       "unit": "night"
     }
@@ -59,114 +59,114 @@
   "categories": [
     {
       "_id": "asd1293uasdads1",
-      "name": "House with beauty backyard",
+      "name": "Catering Dengan Paket Hemat",
       "items": [
         {
           "_id": "asd1293uasdads1",
-          "name": "PSW Antasari",
-          "imageUrl": "/images/mostpicked-1.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "name": "Paket Kantoran",
+          "imageUrl": "/images/food/paketkantoran.jpg",
+          "country": "Min 20 Porsi",
+          "city": "",
           "isPopular": true
         },
         {
           "_id": "asd1293uasdads1",
-          "name": "Kuretakeso",
-          "imageUrl": "/images/mostpicked-2.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "name": "Paket Super Hemat",
+          "imageUrl": "/images/food/pakethemat.jpg",
+          "country": "Min 10 Porsi",
+          "city": "",
           "isPopular": true
         },
         {
           "_id": "asd1293uasdads1",
-          "name": "Arya Duta",
-          "imageUrl": "/images/mostpicked-3.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "name": "Paket Standard",
+          "imageUrl": "/images/food/paketstandard.jpg",
+          "country": "Min 10 Porsi",
+          "city": "",
           "isPopular": false
         },
         {
           "_id": "asd1293uasdads1",
-          "name": "Grand Dhika",
-          "imageUrl": "/images/mostpicked-4.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "name": "Paket Random",
+          "imageUrl": "/images/food/random.jpg",
+          "country": "Min 10 Porsi",
+          "city": "",
           "isPopular": false
         }
       ]
     },
     {
       "_id": "asd1293uasdads1",
-      "name": "Hotels with large living room",
+      "name": "Paket Catering Pesta dan Pernikahan",
       "items": [
         {
           "_id": "asd1293uasdads1",
-          "name": "PSW Antasari",
-          "imageUrl": "/images/mostpicked-5.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "name": "Paket Aqiqah",
+          "imageUrl": "/images/food/aqiqah.jpg",
+          "country": "Min 20 Porsi",
+          "city": "",
           "isPopular": false
         },
         {
           "_id": "asd1293uasdads1",
-          "name": "Kuretakeso",
-          "imageUrl": "/images/mostpicked-1.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "name": "Paket Acara Ulang Tahun",
+          "imageUrl": "/images/food/birthday.jpg",
+          "country": "Min 20 Porsi",
+          "city": "",
           "isPopular": false
         },
         {
           "_id": "asd1293uasdads1",
-          "name": "Arya Duta",
-          "imageUrl": "/images/mostpicked-2.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "name": "Paket Pernikahan",
+          "imageUrl": "/images/food/wedding.jpg",
+          "country": "Min 100 Porsi",
+          "city": "",
           "isPopular": false
         },
         {
           "_id": "asd1293uasdads1",
-          "name": "Grand Dhika",
-          "imageUrl": "/images/mostpicked-3.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "name": "Acara Bebas",
+          "imageUrl": "/images/food/acarabebas.jpg",
+          "country": "Min 10 Porsi",
+          "city": "",
           "isPopular": true
         }
       ]
     },
     {
       "_id": "asd1293uasdads1",
-      "name": "Apartments with kitchen set",
+      "name": "Paket Jomblo",
       "items": [
         {
           "_id": "asd1293uasdads1",
-          "name": "PSW Antasari",
-          "imageUrl": "/images/mostpicked-4.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "name": "Rujak Soto",
+          "imageUrl": "/images/food/rujaksoto.jpg",
+          "country": "Min 1 Porsi",
+          "city": "",
           "isPopular": true
         },
         {
           "_id": "asd1293uasdads1",
-          "name": "Kuretakeso",
-          "imageUrl": "/images/mostpicked-5.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "name": "Pecel Pitek",
+          "imageUrl": "/images/food/pecelpitek.jpg",
+          "country": "Min 1 Porsi",
+          "city": "",
           "isPopular": false
         },
         {
           "_id": "asd1293uasdads1",
-          "name": "Arya Duta",
-          "imageUrl": "/images/mostpicked-1.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "name": "Ayam Bakar",
+          "imageUrl": "/images/food/ayambakar.jpg",
+          "country": "Min 1 Porsi",
+          "city": "",
           "isPopular": true
         },
         {
           "_id": "asd1293uasdads1",
-          "name": "Grand Dhika",
-          "imageUrl": "/images/mostpicked-2.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "name": "Ayam Pedas",
+          "imageUrl": "/images/food/ayampedas.jpg",
+          "country": "Min 1 Porsi",
+          "city": "",
           "isPopular": false
         }
       ]
