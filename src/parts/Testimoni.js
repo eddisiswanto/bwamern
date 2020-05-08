@@ -16,7 +16,7 @@ export default function Testimoni({ data }) {
               style={{ margin: ` 30px 0 0 30px` }}
             >
               <img
-                src={data.imageUrl}
+                src={`${process.env.REACT_APP_HOST}/${data.imageUrl}`}
                 alt="Testimonial"
                 className="position-absolute frame-family"
                 style={{ zIndex: 1 }}

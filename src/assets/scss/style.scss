@@ -102,8 +102,12 @@ section {
 }
 
 .card {
+  &.bordered {
+    border: 1px solid $gray-200;
+  }
+  border-radius: 15px;
   height: 100%;
-  border: solid 1px $gray-200;
+ 
 
   .tag {
     z-index: 3;
