@@ -7,7 +7,7 @@ import MostPicked from "parts/MostPicked";
 import Categories from "parts/Categories";
 import Testimoni from "parts/Testimoni";
 import Footer from "parts/Footer";
-// import landingPage from 'json/landingPage';
+import landingPage from 'json/landingPage';
 
 import { fetchPage } from "store/actions/page";
 
@@ -21,8 +21,8 @@ class LandingPage extends Component {
     window.title = "Staycation | Home";
     window.scrollTo(0, 0);
 
-    if (!this.props.page.landingPage)
-      this.props.fetchPage(`/landing-page`, "landingPage");
+    // if (!this.props.page.landingPage)
+      // this.props.fetchPage(`/landing-page`, "landingPage");
 
   }
 
@@ -30,15 +30,15 @@ class LandingPage extends Component {
     //   hilangkan jika lokal dan landingPage.hero
     const { page } = this.props;
 
-    if (!page.hasOwnProperty("landingPage")) return null;
+    // if (!page.hasOwnProperty("landingPage")) return null;
 
     return (
       <>
         <Header {...this.props}></Header>
-        <Hero refMostPicked={this.refMostPicked} data={page.landingPage.hero} />
-        <MostPicked refMostPicked={this.refMostPicked} data={page.landingPage.mostPicked} />
-        <Categories data={page.landingPage.category} />
-        <Testimoni data={page.landingPage.testimonial} />
+        <Hero refMostPicked={this.refMostPicked} data={landingPage.hero} />
+        <MostPicked refMostPicked={this.refMostPicked} data={landingPage.mostPicked} />
+        <Categories data={landingPage.category} />
+        {/* <Testimoni data={landingPage.testimonial} /> */}
         <Footer />
       </>
     );

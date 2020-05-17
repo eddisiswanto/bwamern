@@ -8,6 +8,10 @@ import Checkout from "pages/Checkout";
 import Example from "pages/ExamplePage";
 
 import "assets/scss/style.scss";
+// import "assets/bootstrap.min.css";
+
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 function App() {
   return (

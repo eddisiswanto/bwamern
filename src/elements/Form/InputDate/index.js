@@ -11,9 +11,9 @@ import formatDate from "utils/formatDate";
 import iconCalendar from "assets/images/icons/icon-calendar.svg";
 
 export default function Date(props) {
-  const { value, placeholder, name } = props;
+  const { minDate, value, placeholder, name } = props;
   const [isShowed, setIsShowed] = useState(false);
-
+  console.log(minDate);
   const datePickerChange = (value) => {
     const target = {
       target: {
@@ -70,6 +70,7 @@ export default function Date(props) {
         {isShowed && (
           <div className="date-range-wrapper">
             <DateRange
+              // minDate={[minDate]}
               editableDateInputs={true}
               onChange={datePickerChange}
               moveRangeOnFirstSelection={false}
@@ -84,6 +85,7 @@ export default function Date(props) {
 }
 
 Date.propTypes = {
+  minDate: propTypes.object,
   value: propTypes.object,
   onChange: propTypes.func,
   placeholder: propTypes.string,

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import { connect } from "react-redux";
 
-import Header from "parts/Header";
+import HeaderDetail from "parts/HeaderDetail";
 import Button from "elements/Button";
 import Stepper, {
   Numbering,
@@ -55,13 +55,13 @@ class Checkout extends Component {
     payload.append("email", data.email);
     payload.append("phoneNumber", data.phone);
     payload.append("idItem", checkout._id);
+    payload.append("jml_order", checkout.jml_order);
     payload.append("duration", checkout.duration);
     payload.append("bookingStartDate", checkout.date.startDate);
     payload.append("bookingEndDate", checkout.date.endDate);
     payload.append("accountHolder", data.bankHolder);
     payload.append("bankFrom", data.bankName);
     payload.append("image", data.proofPayment[0]);
-    // payload.append("bankId", checkout.bankId);
 
     this.props.submitBooking(payload).then(() => {
       nextStep();
@@ -79,8 +79,8 @@ class Checkout extends Component {
             className="row align-items-center justify-content-center text-center"
             style={{ height: "100vh" }}
           >
-            <div className="col-3">
-              Pilih kamar dulu
+            <div className="col-lg-3 col-8">
+              Pilih Paket Catering dulu
               <div>
                 <Button
                   className="btn mt-5"
@@ -99,30 +99,30 @@ class Checkout extends Component {
     const steps = {
       bookingInformation: {
         title: "Booking Information",
-        description: "Please fill up the blank fields below",
+        description: "Silahkan isi form dibawah ini",
         content: (
           <BookingInformation
             data={data}
             checkout={checkout}
-            ItemDetails={page[checkout._id]}
+            ItemDetails={ItemDetails}
             onChange={this.onChange}
           />
         ),
       },
       payment: {
         title: "Payment",
-        description: "Kindly follow the instructions below",
+        description: "Lakukan Pembayaran dan Konfirmasi disini",
         content: (
           <Payment
             data={data}
-            ItemDetails={page[checkout._id]}
+            ItemDetails={ItemDetails}
             checkout={checkout}
             onChange={this.onChange}
           />
         ),
       },
       completed: {
-        title: "Yay! Completed",
+        title: "Yay! Pemesanan Berhasil",
         description: null,
         content: <Completed />,
       },
@@ -130,7 +130,7 @@ class Checkout extends Component {
 
     return (
       <>
-        <Header isCentered />
+        <HeaderDetail isCentered />
 
         <Stepper steps={steps}>
           {(prevStep, nextStep, CurrentStep, steps) => (

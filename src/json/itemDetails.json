@@ -1,102 +1,93 @@
 {
-  "_id": "asd1293uasdads1",
-  "title": "Village Angga",
-  "type": "Hotel",
+  "_id": "5e96cbe292b97300fc902223",
+  "title": "Paket Kantoran",
+  "type": "Paket Hemat",
   "imageId": [
     {
       "_id": "asd1293uasdads1",
-      "url": "/images/img-featured-1.jpg"
+      "imageUrl": "/images/food/acarabebas.jpg"
     },
     {
       "_id": "asd1293uasdads1",
-      "url": "/images/img-featured-2.jpg"
+      "imageUrl": "/images/food/pakethemat.jpg"
     },
     {
       "_id": "asd1293uasdads1",
-      "url": "/images/img-featured-3.jpg"
+      "imageUrl": "/images/food/paketstandard.jpg"
     }
   ],
-  "country": "Indonesia",
-  "city": "Bogor",
-  "price": "52",
-  "unit": "night",
+  "min_order": "20",
+  "price": "20000",
+  "unit": "porsi",
   "isPopular": true,
   "hasBackyard": true,
-  "description": "<p>Minimal techno is a minimalist subgenre of techno music. It ischaracterized by a stripped-down aesthetic that exploits the use ofrepetition and understated development. Minimal techno is thought tohave been originally developed in the early 1990s by Detroit-basedproducers Robert Hood and Daniel Bell.</p><p>Such trends saw the demise of the soul-infused techno that typified theoriginal Detroit sound. Robert Hood has noted that he and Daniel Bellboth realized something was missing from techno in the post-rave era.</p><p>Design is a plan or specification for the construction of an object orsystem or for the implementation of an activity or process, or theresult of that plan or specification in the form of a prototype, productor process. The national agency for design: enabling Singapore to usedesign for economic growth and to make lives better.</p>",
-  "features": [
+  "description": "<p>Paket catering yang cocok untuk makan siang di kantor. Bersama rekan kerja, Pesan makanan dengan praktis dan biaya lebih hemat. Pesan sekarang untuk makan siang anda besok.</p>",
+  "featureId": [
     {
       "_id": "asd1293uasdads1",
-      "qty": "3",
-      "name": "bedroom",
-      "imageUrl": "/images/icon-bedroom.svg"
+      "name": "Nasi Putih",
+      "imageUrl": "/images/icon/rice.svg"
     },
     {
       "_id": "asd1293uasdads1",
-      "qty": "1",
-      "name": "living room",
-      "imageUrl": "/images/icon-livingroom.svg"
+      "name": "Sayur Sop",
+      "imageUrl": "/images/icon/soup.svg"
     },
     {
       "_id": "asd1293uasdads1",
-      "qty": "2",
-      "name": "bath room",
-      "imageUrl": "/images/icon-bathroom.svg"
+      "name": "Bihun",
+      "imageUrl": "/images/icon/noodles.svg"
     },
     {
       "_id": "asd1293uasdads1",
-      "qty": "1",
-      "name": "dining room",
-      "imageUrl": "/images/icon-diningroom.svg"
+      "name": "Telur",
+      "imageUrl": "/images/icon/eggs.svg"
     },
     {
       "_id": "asd1293uasdads1",
-      "qty": "10",
-      "name": "mbps",
-      "imageUrl": "/images/icon-wifi.svg"
+      "name": "Daging",
+      "imageUrl": "/images/icon/meat.svg"
     },
     {
       "_id": "asd1293uasdads1",
-      "qty": "2",
-      "name": "units ready",
-      "imageUrl": "/images/icon-airconditioner.svg"
+      "name": "Sambal Hijau",
+      "imageUrl": "/images/icon/wasabi.svg"
     },
     {
       "_id": "asd1293uasdads1",
-      "qty": "2",
-      "name": "refrigerator",
-      "imageUrl": "/images/icon-refrigerator.svg"
+      "name": "Buah",
+      "imageUrl": "/images/icon/harvest.svg"
     },
     {
       "_id": "asd1293uasdads1",
-      "qty": "1",
-      "name": "television",
-      "imageUrl": "/images/icon-tv.svg"
+      "name": "Air Gelasan",
+      "imageUrl": "/images/icon/water.svg"
     }
   ],
-  "activities": [
+  "activityId": [
     {
       "_id": "asd1293uasdads1",
-      "name": "Kebun Park",
-      "type": "Nature",
-      "imageUrl": "/images/categoryItem1.png"
+      "name": "Diskon up to 5%",
+      "type": "Diskon",
+      "imageUrl": "/images/diskon.jpg"
     },
     {
       "_id": "asd1293uasdads1",
-      "name": "Water land",
-      "type": "Pool",
-      "imageUrl": "/images/categoryItem2.png"
+      "name": "Free Ongkir",
+      "type": "Layanan",
+      "imageUrl": "/images/freeongkir.jpg"
     },
     {
       "_id": "asd1293uasdads1",
-      "name": "Kebun Park",
-      "type": "Nature",
-      "imageUrl": "/images/categoryItem3.png"
+      "name": "Pemesanan Online",
+      "type": "Layanan",
+      "imageUrl": "/images/onlinebooking.png"
     },
     {
       "_id": "asd1293uasdads1",
-      "name": "Water land",
-      "type": "Pool",
-      "imageUrl": "/images/categoryItem4.png"
+      "name": "Koki Handal",
+      "type": "Layanan",
+      "imageUrl": "/images/koki.jpg"
     }
   ],
   "categories": [

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import { connect } from "react-redux";
 
-import Header from "parts/Header";
+import HeaderDetail from "parts/HeaderDetail";
 import PageDetailTitle from "parts/PageDetailTitle";
 import FeaturedImage from "parts/FeaturedImage";
 import PageDetailDescription from "parts/PageDetailDescription";
@@ -21,40 +21,55 @@ class DetailsPage extends Component {
     window.title = "Details Page";
     window.scrollTo(0, 0);
 
-    if (!this.props.page[this.props.match.params.id])
-      this.props.fetchPage(
-        `/detail-page/${this.props.match.params.id}`,
-        this.props.match.params.id
-      );
+    // if (!this.props.page[this.props.match.params.id])
+    //   this.props.fetchPage(
+    //     `/detail-page/${this.props.match.params.id}`,
+    //     this.props.match.params.id
+    //   );
   }
 
   render() {
     const { page, match } = this.props;
 
-    if (!page[match.params.id]) return null;
+    // if (!page[match.params.id]) return null;
 
     const breadcrumb = [
       { pageTitle: "Home", pageHref: "" },
-      { pageTitle: "House Details", pageHref: "" },
+      { pageTitle: "Catering Details", pageHref: "" },
     ];
-    console.log(this.props)
+    console.log(ItemDetails.activityId)
 
     return (
       <>
-        <Header {...this.props} />
-        <PageDetailTitle breadcrumb={breadcrumb} data={page[match.params.id]} />
-        <FeaturedImage data={page[match.params.id].imageId} />
-        <section className="container">
+        <HeaderDetail {...this.props} />
+        <PageDetailTitle breadcrumb={breadcrumb} data={ItemDetails} />
+        <FeaturedImage data={ItemDetails.imageId} />
+        <section className="container" style={{position:"relative", zIndex: 4}}>
           <div className="row">
-            <div className="col-7 pr-5">
+            <div className="col-7 pr-5 d-none d-lg-block">
               <Fade bottom>
-                <PageDetailDescription data={page[match.params.id]} />
+                <PageDetailDescription data={ItemDetails} />
               </Fade>
             </div>
-            <div className="col-5">
+            <div className="col-5 d-none d-lg-block">
               <Fade bottom>
                 <BookingForm
-                  itemDetails={page[match.params.id]}
+                  itemDetails={ItemDetails}
+                  startBooking={this.props.checkoutBooking}
+                />
+              </Fade>
+            </div>
+
+
+            <div className="col-12 d-block d-lg-none">
+              <Fade bottom>
+                <PageDetailDescription data={ItemDetails} />
+              </Fade>
+            </div>
+            <div className="col-12 d-block d-lg-none">
+              <Fade bottom>
+                <BookingForm
+                  itemDetails={ItemDetails}
                   startBooking={this.props.checkoutBooking}
                 />
               </Fade>
@@ -62,8 +77,8 @@ class DetailsPage extends Component {
           </div>
         </section>
 
-        <Activities data={page[match.params.id].activityId} />
-        <Testimoni data={page[match.params.id].testimonial} />
+        <Activities data={ItemDetails.activityId} />
+        {/* <Testimoni data={page[match.params.id].testimonial} /> */}
 
         <Footer />
       </>

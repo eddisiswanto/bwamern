@@ -1,32 +1,42 @@
 import React, { Component } from "react";
 
-import InputDate from "elements/Form/InputDate";
-import Breadcrumb from "elements/Breadcrumb";
+import TextField from "@material-ui/core/TextField";
+import Autocomplete from "@material-ui/lab/Autocomplete";
+
+import ReactAutocomplete from "react-autocomplete";
 
 export default class Example extends Component {
-  // state = {
-  //   value: "",
-  // };
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: "",
+    };
+  }
 
-  state = {
-    value: {
-      startDate: new Date(),
-      endDate: new Date(),
-      key: "selection",
-    },
-  };
+  // state = {
+  //   value: '',
+  // };
 
   handleChange = (e) => {
     this.setState({ value: e.target.value });
   };
-  
 
   render() {
+    const menuStyle = {
 
-    const breadcrumbList = [
-      { pageTitle: "Home", pageHref: "" },
-      { pageTitle: "House Details", pageHref: "" }
-    ];
+      display: 'block',
+      width: '100%',
+      height: 'calc(1.5em + .75rem + 2px)',
+      padding: '.375rem .75rem',
+      fontWeight: 400,
+      lineHeight: 1.5,
+      color: '#495057',
+      backgroundColor: 'white',
+      // backgroundClip: 'padding-box',
+      border: '1px solid #ced4da',
+      borderRadius: '50px',
+      transition: 'red .15s ease-in-out,box-shadow .15s ease-in-out'
+    };
 
     return (
       <div className="container">
@@ -35,16 +45,35 @@ export default class Example extends Component {
           style={{ height: "100vh" }}
         >
           <div className="col-auto">
-            <InputDate
-              max={30}
-              onChange={this.handleChange}
-              name="value"
+            <ReactAutocomplete
+              items={[
+                { id: "foo", label: "foo" },
+                { id: "bar", label: "bar" },
+                { id: "baz", label: "baz" },
+              ]}
+              shouldItemRender={(item, value) =>
+                item.label.toLowerCase().indexOf(value.toLowerCase()) > -1
+              }
+              getItemValue={(item) => item.label}
+              renderItem={(item, highlighted) => (
+                <div
+                  key={item.id}
+                  style={{
+                    backgroundColor: highlighted ? "#eee" : "transparent",
+                    borderRadius: '10px',
+                    padding: '10px',
+                  }}
+                >
+                  {item.label}
+                </div>
+              )}
               value={this.state.value}
+              onChange={(e) => this.setState({ value: e.target.value })}
+              onSelect={(value) => this.setState({ value })}
+              inputProps={{ style: menuStyle }}
             />
 
-            <br/><br/>
-
-            <Breadcrumb data={breadcrumbList} />
+            <button className="btn ml-3 btn-danger">Search</button>
           </div>
         </div>
       </div>

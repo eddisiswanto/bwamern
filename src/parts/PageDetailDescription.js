@@ -4,7 +4,7 @@ import ReactHtmlParser from "react-html-parser";
 export default function PageDetailDescription({ data }) {
   return (
     <main>
-      <h4>About the place</h4>
+      <h4>Deskripsi</h4>
       {ReactHtmlParser(data.description)}
       <div className="row" style={{ marginTop: 30 }}>
         {data.featureId.length === 0
@@ -19,7 +19,7 @@ export default function PageDetailDescription({ data }) {
                   <img
                     width="38"
                     className="d-block mb-2"
-                    src={`${process.env.REACT_APP_HOST}/${feature.imageUrl}`}
+                    src={`${feature.imageUrl}`}
                     alt={feature.name}
                   />{" "}
                   <span>{feature.qty}</span>{" "}
