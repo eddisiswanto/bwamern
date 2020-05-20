@@ -1,15 +1,12 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 
-import ImageKoki from "assets/images/koki/bg.png";
-import ImageFrameHero from "assets/images/hero-frame.jpg";
+import ImageKoki from "assets/images/koki.png";
 import IconCities from "assets/images/icons/location.svg";
 import IconTraveler from "assets/images/icons/traveler.svg";
 import IconTreasure from "assets/images/icons/camera.svg";
-
-import formatNumber from "utils/formatNumber";
-
 import Button from "elements/Button";
+
 export default function Hero(props) {
   function showMostPick() {
     window.scrollTo({
@@ -124,7 +121,7 @@ export default function Hero(props) {
                   />
                   <h6 className="font-weight-bold">24 Foto</h6>
                   <p className="text-gray-600">
-                    Moment Spesial dari Customer 8
+                    Moment Spesial dari Customer
                   </p>
                 </div>
               </div>

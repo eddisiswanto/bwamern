@@ -11,14 +11,14 @@ class BookingForm extends Component {
   constructor(props) {
     super(props);
 
+    var date = new Date();
     this.state = {
       data: {
         jml_order: props.itemDetails.min_order,
         duration: 1,
         date: {
-          minDate: new Date(),
-          startDate: new Date(),
-          endDate: new Date(),
+          startDate: date.addDays(1),
+          endDate: date.addDays(1),
           key: "selection",
         },
       },
@@ -75,7 +75,6 @@ class BookingForm extends Component {
       jml_order: data.jml_order,
       duration: data.duration,
       date: {
-        minDate: data.date.startDate,
         startDate: data.date.startDate,
         endDate: data.date.endDate,
       },
@@ -85,7 +84,8 @@ class BookingForm extends Component {
 
   render() {
     const { data } = this.state;
-    const minDate = new Date();
+    var minDate = new Date();
+    
     const { itemDetails, startBooking } = this.props;
 
     return (
@@ -115,7 +115,12 @@ class BookingForm extends Component {
         </span>
 
         <label htmlFor="date">Untuk Kapan ?</label>
-        <InputDate onChange={this.updateData} name="date" value={data.date} minDate={minDate} />
+        <InputDate
+          onChange={this.updateData}
+          name="date"
+          value={data.date}
+          minDate={minDate.addDays(1)}
+        />
 
         <h6
           className="text-gray-500 font-weight-light"
@@ -149,6 +154,12 @@ class BookingForm extends Component {
 BookingForm.propTypes = {
   itemDetails: propTypes.object,
   startBooking: propTypes.func,
+};
+
+Date.prototype.addDays = function (days) {
+  var date = new Date(this.valueOf());
+  date.setDate(date.getDate() + days);
+  return date;
 };
 
 export default withRouter(BookingForm);

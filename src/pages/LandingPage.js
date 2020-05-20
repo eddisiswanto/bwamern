@@ -38,7 +38,7 @@ class LandingPage extends Component {
         <Hero refMostPicked={this.refMostPicked} data={landingPage.hero} />
         <MostPicked refMostPicked={this.refMostPicked} data={landingPage.mostPicked} />
         <Categories data={landingPage.category} />
-        {/* <Testimoni data={landingPage.testimonial} /> */}
+        <Testimoni data={landingPage.testimonial} />
         <Footer />
       </>
     );

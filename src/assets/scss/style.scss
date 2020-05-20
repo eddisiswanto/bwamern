@@ -365,6 +365,34 @@ $break-small: 768px;
   }
 }
 
+.bg-testi {
+  padding: 70px 0;
+  margin-bottom: 0px;
+  background-repeat: no-repeat;
+  background-color: #fb924861;
+  // background-attachment: fixed;
+  // background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(238, 235, 235, 0.93)), url("../images/acarabebas.jpg");
+  background-position: center;
+}
+
+.testimonial {
+  .title-testimonial {
+    font-size: 32px;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 50px;
+  }
+
+  figure {
+    img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      margin-top: 20px;
+    }
+  }
+}
+
 @media (min-width: 992px) {
   .brand-text-icon-home {
     color: $white;
