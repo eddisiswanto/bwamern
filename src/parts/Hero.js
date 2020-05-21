@@ -15,6 +15,13 @@ export default function Hero(props) {
     });
   }
 
+  function showMostPickSmall() {
+    window.scrollTo({
+      top: props.refMostPickedSmall.current.offsetTop - 30,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <>
       <section className="d-none d-lg-block  bg-header">
@@ -79,7 +86,7 @@ export default function Hero(props) {
                 className="btn px-5"
                 hasShadow
                 isPrimary
-                onClick={showMostPick}
+                onClick={showMostPickSmall}
               >
                 Lihat Catering
               </Button>

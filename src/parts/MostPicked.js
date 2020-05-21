@@ -68,6 +68,7 @@ export default function MostPicked(props) {
       <section
         className="container d-block d-lg-none"
         style={{ marginBottom: 40 }}
+        ref={props.refMostPickedSmall}
       >
         <Fade bottom>
           <h6 className="font-weight-bold mb-3">

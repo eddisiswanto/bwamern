@@ -15,6 +15,7 @@ class LandingPage extends Component {
   constructor(props) {
     super(props);
     this.refMostPicked = React.createRef();
+    this.refMostPickedSmall = React.createRef();
   }
 
   componentDidMount() {
@@ -35,8 +36,8 @@ class LandingPage extends Component {
     return (
       <>
         <Header {...this.props}></Header>
-        <Hero refMostPicked={this.refMostPicked} data={page.landingPage.hero} />
-        <MostPicked refMostPicked={this.refMostPicked} data={page.landingPage.mostPicked} />
+        <Hero refMostPicked={this.refMostPicked} refMostPickedSmall={this.refMostPickedSmall} data={page.landingPage.hero} />
+        <MostPicked refMostPicked={this.refMostPicked} refMostPickedSmall={this.refMostPickedSmall} data={page.landingPage.mostPicked} />
         <Categories data={page.landingPage.category} />
         <Testimoni data={page.landingPage.testimonial} />
         <Footer />

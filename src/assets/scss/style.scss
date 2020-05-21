@@ -368,8 +368,8 @@ $break-small: 768px;
   padding: 30px;
 
   img {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     margin-right: 20px;
     margin-bottom: 20px;
   }
@@ -419,6 +419,12 @@ $break-small: 768px;
 
   .info-panel {
     margin-top: -150px;
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
   }
 
 }
+
