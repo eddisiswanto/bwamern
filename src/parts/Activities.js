@@ -41,7 +41,7 @@ export default function Activities({ data }) {
                       <div className="meta-wrapper">
                         <Button
                           type="link"
-                          href={`/properties/${item._id}`}
+                          href='#'
                           className="stretched-link d-block text-gray-800"
                         >
                           <h5 className="h4">{item.name}</h5>
@@ -92,7 +92,7 @@ export default function Activities({ data }) {
                       </figure>
                       <div className="meta-wrapper text-center">
                         <Button
-                          href={`/properties/${item._id}`}
+                          href="#"
                           className="stretched-link d-block text-gray-800"
                           type="link"
                         >
