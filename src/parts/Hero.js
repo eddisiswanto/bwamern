@@ -126,7 +126,7 @@ export default function Hero(props) {
                     className="float-left"
                     alt="icon city"
                   />
-                  <h6 className="font-weight-bold">{props.data.foto} Foto</h6>
+                  <h6 className="font-weight-bold">109 Foto</h6>
                   <p className="text-gray-600">Galeri Berbagai Menu dan Service</p>
                 </div>
               </div>

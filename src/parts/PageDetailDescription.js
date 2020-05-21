@@ -10,7 +10,7 @@ export default function PageDetailDescription({ data }) {
       </div>
       <div className="row" style={{ marginTop: 30 }}>
         {data.featureId.length === 0
-          ? "Tidak Ada Feature"
+          ? " "
           : data.featureId.map((feature, index) => {
               return (
                 <div
