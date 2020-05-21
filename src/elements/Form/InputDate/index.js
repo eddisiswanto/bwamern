@@ -44,9 +44,15 @@ export default function Date(props) {
     focus.indexOf(1) < 0 && setIsShowed(false);
   };
 
-  const displayDate = `${value.startDate ? formatDate(value.startDate) : ""}${
-    value.endDate ? " - " + formatDate(value.endDate) : ""
-  }`;
+  let displayDate = '';
+
+  if (formatDate(value.startDate) == formatDate(value.endDate)) {
+    displayDate = `${value.startDate ? formatDate(value.startDate) + ' Saja' : ""}`;
+  } else {
+    displayDate = `${value.startDate ? formatDate(value.startDate) : ""}${
+      value.endDate ? " - " + formatDate(value.endDate) : ""
+    }`;
+  }
 
   return (
     <div

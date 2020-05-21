@@ -2,8 +2,8 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 
 import ImageKoki from "assets/images/koki.png";
-import IconCities from "assets/images/icons/location.svg";
-import IconTraveler from "assets/images/icons/traveler.svg";
+import IconMenu from "assets/images/icons/catering.svg";
+import IconPelanggan from "assets/images/icons/restaurant.svg";
 import IconTreasure from "assets/images/icons/camera.svg";
 import Button from "elements/Button";
 
@@ -94,23 +94,23 @@ export default function Hero(props) {
             <div className="col-10 info-panel">
               <div className="row">
                 <div className="col-lg">
-                  <img
-                    src={IconCities}
-                    className="float-left"
-                    alt="icon city"
-                  />
-                  <h6 className="font-weight-bold">24 Menu</h6>
+                  <img src={IconMenu} className="float-left" alt="icon city" />
+                  <h6 className="font-weight-bold">
+                    {props.data.catering} Menu
+                  </h6>
                   <p className="text-gray-600">
                     Sudah Tersedia di CateringKita
                   </p>
                 </div>
                 <div className="col-lg">
                   <img
-                    src={IconTraveler}
+                    src={IconPelanggan}
                     className="float-left"
                     alt="icon city"
                   />
-                  <h6 className="font-weight-bold">24 Pelanggan</h6>
+                  <h6 className="font-weight-bold">
+                    {props.data.pelanggan} Pelanggan
+                  </h6>
                   <p className="text-gray-600">Puas Menggunakan Layanan Kami</p>
                 </div>
                 <div className="col-lg">
@@ -119,10 +119,8 @@ export default function Hero(props) {
                     className="float-left"
                     alt="icon city"
                   />
-                  <h6 className="font-weight-bold">24 Foto</h6>
-                  <p className="text-gray-600">
-                    Moment Spesial dari Customer
-                  </p>
+                  <h6 className="font-weight-bold">{props.data.foto} Foto</h6>
+                  <p className="text-gray-600">Galeri Berbagai Menu dan Service</p>
                 </div>
               </div>
             </div>

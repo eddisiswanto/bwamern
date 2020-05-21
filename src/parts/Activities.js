@@ -11,9 +11,7 @@ export default function Activities({ data }) {
     <>
       <section className="container d-none d-md-block">
         <Fade bottom>
-          <h4 className="mb-3 font-weight-medium">
-            Service Unggulan Kami
-          </h4>
+          <h4 className="mb-3 font-weight-medium">Service Unggulan Kami</h4>
           <div className="container-grid">
             {data.map((item, index2) => {
               return (
@@ -31,7 +29,11 @@ export default function Activities({ data }) {
                       )}
                       <figure className="img-wrapper" style={{ height: 180 }}>
                         <img
-                          src={item.imageUrl ? `${item.imageUrl}` : ""}
+                          src={
+                            item.imageUrl
+                              ? `${process.env.REACT_APP_HOST}/${item.imageUrl}`
+                              : ""
+                          }
                           alt={item.name}
                           className="img-cover"
                         />
@@ -72,17 +74,18 @@ export default function Activities({ data }) {
             >
               {data.map((item, index2) => {
                 return (
-                  <div
-                    className="item"
-                    key={`activities-sm-${index2}`}
-                  >
+                  <div className="item" key={`activities-sm-${index2}`}>
                     <div className="card">
                       <figure
                         className="img-wrapper"
                         style={{ height: 180, borderRadius: 5 }}
                       >
                         <img
-                          src={item.imageUrl ? `${item.imageUrl}` : ""}
+                          src={
+                            item.imageUrl
+                              ? `${process.env.REACT_APP_HOST}/${item.imageUrl}`
+                              : ""
+                          }
                           alt={item.name}
                           className="img-cover"
                         />
@@ -95,9 +98,7 @@ export default function Activities({ data }) {
                         >
                           <h6>{item.name}</h6>
                         </Button>
-                        <span className="text-gray-500">
-                          {item.type}
-                        </span>
+                        <span className="text-gray-500">{item.type}</span>
                       </div>
                     </div>
                   </div>

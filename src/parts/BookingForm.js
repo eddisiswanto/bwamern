@@ -85,7 +85,7 @@ class BookingForm extends Component {
   render() {
     const { data } = this.state;
     var minDate = new Date();
-    
+
     const { itemDetails, startBooking } = this.props;
 
     return (
@@ -121,6 +121,9 @@ class BookingForm extends Component {
           value={data.date}
           minDate={minDate.addDays(1)}
         />
+        <span className="text-gray-400 mb-3" style={{ marginTop: -15 }}>
+          <small>Min. Pesanan untuk besok</small>
+        </span>
 
         <h6
           className="text-gray-500 font-weight-light"

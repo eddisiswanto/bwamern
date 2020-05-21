@@ -5,17 +5,19 @@ import Button from "elements/Button";
 import OwlCarousel from "react-owl-carousel";
 
 export default function Categories({ data }) {
-
   return data.map((category, index1) => {
     return (
       <>
-        <section className="container d-none d-md-block" key={`category-${index1}`}>
+        <section
+          className="container d-none d-md-block"
+          key={`category-${index1}`}
+        >
           <Fade bottom>
             <h4 className="mb-3 font-weight-medium">{category.name}</h4>
             <div className="container-grid">
               {category.itemId.length === 0 ? (
                 <div className="row">
-                  <div className="col-auto align-items-center">
+                  <div className="col-12 align-items-center">
                     There is no properti at this category
                   </div>
                 </div>
@@ -39,7 +41,11 @@ export default function Categories({ data }) {
                             style={{ height: 180 }}
                           >
                             <img
-                              src={`${item.imageId[0].imageUrl}`}
+                              src={
+                                item.imageId[0]
+                                  ? `${process.env.REACT_APP_HOST}/${item.imageId[0].imageUrl}`
+                                  : ""
+                              }
                               alt={item.title}
                               className="img-cover"
                             />
@@ -68,7 +74,7 @@ export default function Categories({ data }) {
 
         <section
           className="container d-block d-md-none"
-          style={{ paddingRight: 0, marginBottom:40, marginRight: 0 }}
+          style={{ paddingRight: 0, marginBottom: 40, marginRight: 0 }}
           key={`category-small-${index1}`}
         >
           <Fade bottom>
@@ -80,7 +86,7 @@ export default function Categories({ data }) {
                     There is no properti at this category
                   </div>
                 </div>
-              ) : ( 
+              ) : (
                 <OwlCarousel
                   className="owl-theme"
                   items={2.2}
@@ -107,7 +113,11 @@ export default function Categories({ data }) {
                             style={{ height: 180, borderRadius: 5 }}
                           >
                             <img
-                              src={`${item.imageId[0].imageUrl}`}
+                              src={
+                                item.imageId[0]
+                                  ? `${process.env.REACT_APP_HOST}/${item.imageId[0].imageUrl}`
+                                  : ""
+                              }
                               alt={item.title}
                               className="img-cover"
                             />

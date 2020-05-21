@@ -71,84 +71,34 @@ export default function Testimoni({ data }) {
 
           <Fade bottom>
             <div className="row">
-              <div className="col-4 justify-content-center d-flex">
-                <div className="card bordered p-3 text-center">
-                  <figure>
-                    <img
-                      src={`${data.imageUrl}`}
-                      class="figure-img img-fluid rounded-circle"
-                      alt={data.familyName}
-                    />
-                  </figure>
+              {data.map((item, index) => {
+                return (
+                  <div className="col-4 justify-content-center d-flex" key={index}>
+                    <div className="card p-3 text-center">
+                      <figure>
+                        <img
+                          src={`${item.imageUrl}`}
+                          className="figure-img img-fluid rounded-circle"
+                          alt={item.name}
+                        />
+                      </figure>
 
-                  <div className="ml-4">
-                    <Star
-                      value={data.rate}
-                      width={35}
-                      height={35}
-                      spacing={4}
-                    ></Star>
+                      <div className="ml-4">
+                        <Star
+                          value={+item.rate}
+                          width={35}
+                          height={35}
+                          spacing={4}
+                        ></Star>
+                      </div>
+
+                      <h5>{item.name}</h5>
+                      <span className="text-gray-500">{item.pekerjaan}</span>
+                      <p className="mt-3">{item.content}</p>
+                    </div>
                   </div>
-
-                  <h5>{data.familyName}</h5>
-                  <span className="text-gray-500">
-                    P{data.familyOccupation}
-                  </span>
-                  <p className="mt-3">{data.content}</p>
-                </div>
-              </div>
-              <div className="col-4 justify-content-center d-flex">
-                <div className="card bordered p-3 text-center">
-                  <figure>
-                    <img
-                      src={`${data.imageUrl}`}
-                      class="figure-img img-fluid rounded-circle"
-                      alt={data.familyName}
-                    />
-                  </figure>
-
-                  <div className="ml-4">
-                    <Star
-                      value={data.rate}
-                      width={35}
-                      height={35}
-                      spacing={4}
-                    ></Star>
-                  </div>
-
-                  <h5>{data.familyName}</h5>
-                  <span className="text-gray-500">
-                    P{data.familyOccupation}
-                  </span>
-                  <p className="mt-3">{data.content}</p>
-                </div>
-              </div>
-              <div className="col-4 justify-content-center d-flex">
-                <div className="card bordered p-3 text-center">
-                  <figure>
-                    <img
-                      src={`${data.imageUrl}`}
-                      class="figure-img img-fluid rounded-circle"
-                      alt={data.familyName}
-                    />
-                  </figure>
-
-                  <div className="ml-4">
-                    <Star
-                      value={data.rate}
-                      width={35}
-                      height={35}
-                      spacing={4}
-                    ></Star>
-                  </div>
-
-                  <h5>{data.familyName}</h5>
-                  <span className="text-gray-500">
-                    P{data.familyOccupation}
-                  </span>
-                  <p className="mt-3">{data.content}</p>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </Fade>
         </div>
